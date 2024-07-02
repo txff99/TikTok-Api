@@ -158,6 +158,7 @@ class Sound:
                 self.cover_large = data.get("musicInfo").get("music").get("coverLarge")
                 self.duration = data.get("musicInfo").get("music").get("duration")
 
+        self.authorName = "unknown"
         if "music" in keys:
             self.title = data.get("music").get("title")
             self.id = data.get("music").get("id")
@@ -165,7 +166,9 @@ class Sound:
             self.play_url = data.get("music").get("playUrl")
             self.cover_large = data.get("music").get("coverLarge")
             self.duration = data.get("music").get("duration")
+            self.authorName = data.get("music").get("authorName")
 
+        self.stats = None
         if "stats" in keys:
             self.stats = data.get("stats")
 
